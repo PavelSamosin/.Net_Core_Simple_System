@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "HomePage";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>Pavel S's Student Course Registration System</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="text-center">
+        <h1>Welcome to the Student Course Registration Form</h1>
+    </div>
+    <h2>Choose an option:</h2>
+    <h3>Submit a Student Registration Form: </h3> <a class="btn btn-primary" asp-action="StudentForm">Student Form</a><br />
+    <h3>Submit a Course Registration Form: </h3> <a class="btn btn-primary" asp-action="CourseForm">Course Form</a><br />
+    <h3>View the Summary Page: </h3> <a class="btn btn-primary" asp-action="Summary">Summary Page</a><br />
+    <h3>View the Course Page: </h3> <a class="btn btn-primary" asp-action="CourseSummary">Course Summary Page</a><br />
+</body>
+</html>

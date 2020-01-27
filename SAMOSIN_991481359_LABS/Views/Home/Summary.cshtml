@@ -1,0 +1,46 @@
+﻿@model IEnumerable<SAMOSIN_991481359_LABS.Models.Student>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List Responses</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel-body">
+        <h2>
+            List of all the students
+        </h2>
+        <table class="table table-smtable-striped table-bordered">
+            <thread>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Selected Course</th>
+                    <th>Student Number</th>
+                    <th></th>
+                </tr>
+            </thread>
+            <tbody>
+                @foreach (SAMOSIN_991481359_LABS.Models.Student r in Model)
+                {
+                    <tr>
+                        <td>@r.firstName</td>
+                        <td>@r.lastName</td>
+                        <td>@r.selectedCourse</td>
+                        <td>@r.studentNum</td>
+                        <td><a class="btn btn-primary" asp-action="DropStudent">Drop Student</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="btn btn-primary" asp-action="HomePage">HomePage</a>
+        <a class="btn btn-primary" asp-action="StudentForm">Add Another Student</a>
+    </div>
+</body>
+</html>

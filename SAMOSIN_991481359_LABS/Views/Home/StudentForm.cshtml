@@ -1,0 +1,48 @@
+﻿@model SAMOSIN_991481359_LABS.Models.Student
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Student Form</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center">
+            <h2>Student Form</h2>
+        </div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="StudentForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="firstName">Your first name:</label>
+                    <input class="form-control" asp-for="firstName" />
+                </div></br>
+                <div class="form-group">
+                    <label asp-for="lastName">Your last name:</label>
+                    <input class="form-control" asp-for="lastName" />
+                </div></br>
+                <div>
+                    <label>Course Selection</label>
+                    <select class="form-control" asp-for="selectedCourse">
+                        <option value="">Choose a course</option>
+                        <option value="CSharpProgramming">C# Programming</option>
+                        <option value="Math">Advanced Math</option>
+                        <option value="MixedScience">Mixed Sciences</option>
+                        <option value="Physics">Physics</option>
+                    </select>
+                </div></br>
+                <div class="form-group">
+                    <label asp-for="studentNum">Your student number:</label>
+                    <input class="form-control" asp-for="studentNum" />
+                </div></br>
+                <div class="text-center"><button class="btnbtn-primary" type="submit">Submit</button></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

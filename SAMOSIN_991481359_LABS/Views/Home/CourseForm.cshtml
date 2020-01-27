@@ -1,0 +1,42 @@
+﻿@model SAMOSIN_991481359_LABS.Models.Course
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Course Form</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center">
+            <h2>Course Form</h2>
+        </div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="CourseForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="courseCode">The course code:</label>
+                    <input class="form-control" asp-for="courseCode" />
+                </div></br>
+                <div class="form-group">
+                    <label asp-for="courseName">The course name:</label>
+                    <input class="form-control" asp-for="courseName" />
+                </div></br>
+                <div class="form-group">
+                    <label asp-for="enrolled">Number of enrolled:</label>
+                    <input class="form-control" asp-for="enrolled" />
+                </div></br>
+                <div class="form-group">
+                    <label asp-for="creditNumber">Credit number:</label>
+                    <input class="form-control" asp-for="creditNumber" />
+                </div></br>
+                <div class="text-center"><button class="btnbtn-primary" type="submit">Submit</button></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

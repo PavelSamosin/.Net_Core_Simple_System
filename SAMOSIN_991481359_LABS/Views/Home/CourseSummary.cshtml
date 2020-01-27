@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SAMOSIN_991481359_LABS.Models.Course>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List Responses</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel-body">
+        <h2>
+            List of all the Courses
+        </h2>
+        <table class="table table-smtable-striped table-bordered">
+            <thread>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Course Code</th>
+                    <th>Enrolled</th>
+                    <th>Credit Number</th>
+                </tr>
+            </thread>
+            <tbody>
+                @foreach (SAMOSIN_991481359_LABS.Models.Course c in Model)
+                {
+                    <tr>
+                        <td>@c.courseName</td>
+                        <td>@c.courseCode</td>
+                        <td>@c.enrolled</td>
+                        <td>@c.creditNumber</td>
+                        <td> <td><a class="btn btn-primary" asp-action="DropCourse">Drop Course</a></td></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a class="btn btn-primary" asp-action="HomePage">HomePage</a>
+        <a class="btn btn-primary" asp-action="CourseForm">Add Another Course</a>
+    </div>
+</body>
+</html>
